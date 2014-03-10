@@ -1,0 +1,31 @@
+----------------------------------------------------------------------------------
+General
+----------------------------------------------------------------------------------
+Build it fully optimized with: make FINAL=3
+
+There are some #defines to play with server settings in Server.h
+
+More info on how to start/stop the server is in main.cpp (Notes)
+
+----------------------------------------------------------------------------------
+Test #1
+----------------------------------------------------------------------------------
+
+I run this as my MacOS X machine’s DNS server.
+
+You may already have that port in use and you’ll have to stop that process first.
+
+In that case:
+	sudo lsof -i :53 | grep LISTEN, to get the pid
+	stop any server on 53 (if any), run this one as root.
+
+
+----------------------------------------------------------------------------------
+Test #2
+----------------------------------------------------------------------------------
+
+Run ./lotsOfDigs.pl in more than one terminal at once. You really need to run
+quite a few of these simultaneously to give the server a good beating.
+
+You can add more domains, edit the dig parameters etc. Ctrl+C to end it. You
+can also tweak it to send nothing but random domains if you like.
