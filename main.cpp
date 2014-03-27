@@ -88,13 +88,7 @@ using namespace std;
 
 int main(int argc, char * const argv[])
 {
-    //
-    // Load and parse the tree data file.
-    //
-    //const char*    arg1 = argc > 1 ? argv[1] : "";
-    //const char*    arg2 = argc > 2 ? argv[2] : "";
-    //const char*    arg3 = argc > 2 ? argv[2] : "";
-    int            rc;
+    int rc;
     
     cout << "\nStarting server...\n";
     unsigned short listenPort = argc > 1 ? atoi(argv[1]) : 53;
