@@ -30,15 +30,15 @@ endif
 # (make -DFINAL=3) will make the fully optmized release binary
 
 $(APP_NAME): $(APP_OFILES)
-$(COMPILER) -o $(APP_NAME) $(APP_OFILES) $(LIBS)
+	$(COMPILER) -o $(APP_NAME) $(APP_OFILES) $(LIBS)
 
 clean:
-rm -rf $(APP_NAME) $(APP_OFILES)
+	rm -rf $(APP_NAME) $(APP_OFILES)
 
 ##############################################################################
 # Build Rules
 ##############################################################################
 %.o : %.cpp
-$(COMPILER) -o $@ $(FLAGS) $<
+	$(COMPILER) -o $@ $(FLAGS) $<
 
 
