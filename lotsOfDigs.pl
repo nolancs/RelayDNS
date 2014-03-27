@@ -26,23 +26,23 @@ $domains[$num_domains++] = "yelp.com";
 $command_base = "dig \@$dig_addr -p $dig_port";
 while (1)
 {
-	$idx = int(rand($num_domains));
-	my $domain_str = "";
-	
-	if ($idx == 0)
-	{
-		# Use a random domain
-		@chars = ("A".."Z", "a".."z");
-		$domain_str .= $chars[rand @chars] for 1..8;
-		$domain_str .= ".com";
-	}
-	else
-	{
-		# Use working domain out of our list
-		$domain_str = $domains[$idx];
-	}
-	
-	$command = "$command_base $domain_str";
-	print("Running: $command\n");
-	`$command`;
+    $idx = int(rand($num_domains));
+    my $domain_str = "";
+    
+    if ($idx == 0)
+    {
+# Use a random domain
+        @chars = ("A".."Z", "a".."z");
+        $domain_str .= $chars[rand @chars] for 1..8;
+        $domain_str .= ".com";
+    }
+    else
+    {
+# Use working domain out of our list
+        $domain_str = $domains[$idx];
+    }
+    
+    $command = "$command_base $domain_str";
+    print("Running: $command\n");
+    `$command`;
 }
